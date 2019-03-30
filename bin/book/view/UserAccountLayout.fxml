@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="377.0" prefWidth="705.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="book.view.UserAccountController">
+   <children>
+      <Label layoutX="232.0" layoutY="11.0" prefHeight="59.0" prefWidth="230.0" text="User Account Information" textAlignment="CENTER" textFill="#dd0606">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="57.0" layoutY="57.0" text="Username: ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="username" layoutX="132.0" layoutY="60.0" />
+      <TableView fx:id="bookBorrowedTable" layoutX="23.0" layoutY="89.0" prefHeight="219.0" prefWidth="663.0">
+        <columns>
+          <TableColumn fx:id="authorColumn" prefWidth="126.0" text="Author" />
+          <TableColumn fx:id="titleColumn" prefWidth="166.0" text="Title" />
+            <TableColumn fx:id="publishingYearColumn" prefWidth="57.0" text="Year" />
+            <TableColumn fx:id="isbnColumn" prefWidth="116.0" text="ISBN" />
+            <TableColumn fx:id="publisherColumn" prefWidth="101.0" text="Publisher" />
+            <TableColumn fx:id="llcColumn" minWidth="0.0" prefWidth="96.0" text="LLC" />
+        </columns>
+      </TableView>
+      <Button fx:id="returnBook" layoutX="552.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleReturnTheBookButton" text="Return the book" />
+      <Label layoutX="24.0" layoutY="321.0" text="Note: If you want to return a book, please, choose the book &#10;from the list and press &quot;Return the book&quot;" />
+   </children>
+</AnchorPane>
